@@ -50,10 +50,14 @@ class App extends React.Component {
             ]
         ]
 
+        const helloWorld = "Hello World";
+
         return (
             <ul>
                 <li>{userList.L1.Name}</li>
                 {<li>{userList.L2.Name}</li>}
+                <p>-------------------------------------------</p>
+                <p>{helloWorld}</p>
                 <p>-------------------------------------------</p>
                 {/* Printing Array of object through loops */}
                 {
@@ -71,6 +75,7 @@ class App extends React.Component {
                     infoUser.map((value, index) => {
                         return (
                             value.map((value2, index2) => {
+                                console.log(value2)
                                 return (
                                     <React.Fragment key={index2}>
                                         {
