@@ -1,0 +1,100 @@
+// import React, { Component } from 'react';
+// import logo from './logo.svg';
+// import './App.css';
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <div className="App">
+//         <header className="App-header">
+//           <img src={logo} className="App-logo" alt="logo" />
+//           <p>
+//             Edit <code>src/App.js</code> and save to reload.
+//           </p>
+//           <a
+//             className="App-link"
+//             href="https://reactjs.org"
+//             target="_blank"
+//             rel="noopener noreferrer"
+//           >
+//             Learn React
+//           </a>
+//         </header>
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+  // constructor(){
+  //   super
+  // }
+  render() {
+    const heading="This is heading"
+    
+    return (
+      <div className="App">
+        <Statechange uq={heading}/>
+      </div>
+    );
+  }
+}
+
+// const Header = (props)=>{
+//   return(
+//     <div>
+//       <h1>{props.uq}</h1>
+//       <form>
+//         <input type="text" />
+//       </form>
+//       <button>Change</button>
+
+      
+//     </div>
+//   )
+// }
+
+class Statechange extends Component{
+ constructor(props){
+   super(props)
+   this.state={
+     y:""
+   }
+ }
+
+ parag = ()=>{
+   this.setState({
+     y: x
+   })
+ }
+
+  render(){
+  //  let x;
+    return(
+      <div>
+        <div>
+      <h1>{this.props.uq}</h1>
+      <form>
+        <input id="box" type="text" />
+      </form>
+      <button onClick={this.yo}>Change</button>
+    </div>
+        <p>{this.state.y}</p>
+      </div>
+    )
+   
+  }
+ yo = ()=>{
+
+   let x= document.getElementById('box').value;
+    console.log(x);
+  }
+}
+
+export default App;
