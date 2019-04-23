@@ -83,22 +83,6 @@ class App extends React.Component {
                         )
                     })
                 }
-                {
-                    infoUser.map((value, index) => {
-                        return (
-                            value.map((value2, index2) => {
-                                return (
-                                    <React.Fragment key={index2}>
-                                        {
-                                            value2.Name ? <li>Name: {value2.Name}, Age: {value2.Age}</li> :
-                                                <li>{value2}</li>
-                                        }
-                                    </React.Fragment>
-                                )
-                            })
-                        )
-                    })
-                }
             </ul>
         )
     }
